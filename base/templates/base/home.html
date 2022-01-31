@@ -1,0 +1,26 @@
+{% extends 'main.html' %} {% block content %}
+{% load static %}
+
+<h1>Home</h1>
+
+<div>
+  {% if rooms %}
+  <p>rooms are there</p>
+  {% endif %}
+
+  <div>
+    {% for room in rooms %}
+    <h4>{{room.id}}</h4>
+    {% endfor %}
+  </div>
+
+  <div>
+      <h4><a href="room/1">Room 1</a></h4>
+      <h4><a href="room/2">Room 2</a></h4>
+      <h4><a href="room/3">Room 3</a></h4>
+      <h4><a href="room/4">Room 4</a></h4>
+  </div>
+
+</div>
+
+{% endblock %}
